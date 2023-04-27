@@ -39,7 +39,7 @@ or5 carry4_4(.a(g3), .b(carry4_tmp0), .c(carry4_tmp1), .d(carry4_tmp2), .e(carry
 
 and4 pg0(.a(p0), .b(p1), .c(p2), .d(p3), .out(pg));
 
-and2 gg_0(.a(p3), .b(p2), .out(gg_tmp0));
+and2 gg_0(.a(p3), .b(g2), .out(gg_tmp0));
 and3 gg_1(.a(p3), .b(p2), .c(g1), .out(gg_tmp1));
 and4 gg_2(.a(p3), .b(p2), .c(p1), .d(g0), .out(gg_tmp2));
 or4 gg_3(.a(g3), .b(gg_tmp0), .c(gg_tmp1), .d(gg_tmp2), .out(gg));
