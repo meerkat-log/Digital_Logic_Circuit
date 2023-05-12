@@ -1,0 +1,144 @@
+D:/Project/hybrid/tb_carry_generate.v {1 {vlog -work work -stats=none D:/Project/hybrid/tb_carry_generate.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_carry_generate
+
+Top level modules:
+	tb_carry_generate
+
+} {} {}} D:/Project/hybrid/tb_mux_21.v {1 {vlog -work work -stats=none D:/Project/hybrid/tb_mux_21.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_mux_21
+
+Top level modules:
+	tb_mux_21
+
+} {} {}} D:/Project/hybrid/hybrid.v {1 {vlog -work work -stats=none D:/Project/hybrid/hybrid.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module hybrid
+
+Top level modules:
+	hybrid
+
+} {} {}} D:/Project/hybrid/xor2.v {2 {vlog -work work -stats=none D:/Project/hybrid/xor2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+** Warning: D:/Project/hybrid/xor2.v(1): (vlog-2283) Extra semicolon in $unit (global) scope.
+** Warning: D:/Project/hybrid/xor2.v(10): (vlog-2284) Empty $unit scope found.
+-- Compiling package xor2_v_unit
+-- Compiling module xor2
+
+Top level modules:
+	xor2
+
+} {} {}} D:/Project/hybrid/full_adder_4bit.v {1 {vlog -work work -stats=none D:/Project/hybrid/full_adder_4bit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module full_adder_4bit
+
+Top level modules:
+	full_adder_4bit
+
+} {} {}} D:/Project/hybrid/and2.v {1 {vlog -work work -stats=none D:/Project/hybrid/and2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module and2
+
+Top level modules:
+	and2
+
+} {} {}} D:/Project/hybrid/and3.v {1 {vlog -work work -stats=none D:/Project/hybrid/and3.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module and3
+
+Top level modules:
+	and3
+
+} {} {}} D:/Project/hybrid/select_adder.v {1 {vlog -work work -stats=none D:/Project/hybrid/select_adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module select_adder
+
+Top level modules:
+	select_adder
+
+} {} {}} D:/Project/hybrid/and4.v {1 {vlog -work work -stats=none D:/Project/hybrid/and4.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module and4
+
+Top level modules:
+	and4
+
+} {} {}} D:/Project/hybrid/and5.v {1 {vlog -work work -stats=none D:/Project/hybrid/and5.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module and5
+
+Top level modules:
+	and5
+
+} {} {}} D:/Project/hybrid/full_adder.v {1 {vlog -work work -stats=none D:/Project/hybrid/full_adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module full_adder
+
+Top level modules:
+	full_adder
+
+} {} {}} D:/Project/hybrid/carry_generate.v {1 {vlog -work work -stats=none D:/Project/hybrid/carry_generate.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module carry_generate
+
+Top level modules:
+	carry_generate
+
+} {} {}} D:/Project/hybrid/or2.v {1 {vlog -work work -stats=none D:/Project/hybrid/or2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module or2
+
+Top level modules:
+	or2
+
+} {} {}} D:/Project/hybrid/tb_select_adder.v {1 {vlog -work work -stats=none D:/Project/hybrid/tb_select_adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_select_adder
+
+Top level modules:
+	tb_select_adder
+
+} {} {}} D:/Project/hybrid/mux_21.v {1 {vlog -work work -stats=none D:/Project/hybrid/mux_21.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux_21
+
+Top level modules:
+	mux_21
+
+} {} {}} D:/Project/hybrid/or3.v {1 {vlog -work work -stats=none D:/Project/hybrid/or3.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module or3
+
+Top level modules:
+	or3
+
+} {} {}} D:/Project/hybrid/or4.v {1 {vlog -work work -stats=none D:/Project/hybrid/or4.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module or4
+
+Top level modules:
+	or4
+
+} {} {}} D:/Project/hybrid/partial_full_adder.v {1 {vlog -work work -stats=none D:/Project/hybrid/partial_full_adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module partial_full_adder
+
+Top level modules:
+	partial_full_adder
+
+} {} {}} D:/Project/hybrid/or5.v {1 {vlog -work work -stats=none D:/Project/hybrid/or5.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module or5
+
+Top level modules:
+	or5
+
+} {} {}} D:/Project/hybrid/tb_full_adder.v {1 {vlog -work work -stats=none D:/Project/hybrid/tb_full_adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_full_adder
+
+Top level modules:
+	tb_full_adder
+
+} {} {}}
