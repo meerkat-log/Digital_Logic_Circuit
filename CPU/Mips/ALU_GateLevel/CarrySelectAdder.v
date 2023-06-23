@@ -15,6 +15,7 @@ Mux2to1_1bit MUX_CLA2_Cout(.I0(cla2_0_co_tmp), .I1(cla2_1_co_tmp), .Sel(Cin), .O
 Mux2to1_2bit MUX_CLA2_Sum(.I0(cla2_0_sum_tmp), .I1(cla2_1_sum_tmp), .Sel(Cin), .Out(Sum));
 
 endmodule
+
 module CarrySelectAdder_3bit(A, B, Cin, Sum, Cout);
 
 input [2:0] A, B;
@@ -32,6 +33,7 @@ Mux2to1_1bit MUX_CLA3_Cout(.I0(cla3_0_co_tmp), .I1(cla3_1_co_tmp), .Sel(Cin), .O
 Mux2to1_3bit MUX_CLA3_Sum(.I0(cla3_0_sum_tmp), .I1(cla3_1_sum_tmp), .Sel(Cin), .Out(Sum));
 
 endmodule
+
 module CarrySelectAdder_4bit(A, B, Cin, Sum, Cout);
 
 input [3:0] A, B;
@@ -49,6 +51,7 @@ Mux2to1_1bit MUX_CLA4_Cout(.I0(cla4_0_co_tmp), .I1(cla4_1_co_tmp), .Sel(Cin), .O
 Mux2to1_4bit MUX_CLA4_Sum(.I0(cla4_0_sum_tmp), .I1(cla4_1_sum_tmp), .Sel(Cin), .Out(Sum));
 
 endmodule
+
 module CarrySelectAdder_5bit(A, B, Cin, Sum, Cout);
 
 input [4:0] A, B;
@@ -66,3 +69,4 @@ Mux2to1_1bit MUX_CLA5_Cout(.I0(cla5_0_co_tmp), .I1(cla5_1_co_tmp), .Sel(Cin), .O
 Mux2to1_5bit MUX_CLA5_Sum(.I0(cla5_0_sum_tmp), .I1(cla5_1_sum_tmp), .Sel(Cin), .Out(Sum));
 
 endmodule
+

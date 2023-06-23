@@ -1,3 +1,16 @@
+`timescale 1ns/1ns
+
+module PartialFullAdder(A, B, Cin, Sum, G, P);
+
+input A, B, Cin;
+output Sum, G, P;
+
+AND2 G_OUT(.A(A), .B(B), .Out(G));
+XOR2 P_OUT(.A(A), .B(B), .Out(P));
+XOR2 SUM_OUT(.A(P), .B(Cin), .Out(Sum));
+
+endmodule
+
 module CarryLookaheadAdder_2bit(A, B, Cin, Sum, Cout);
 
 input [1:0] A, B;
@@ -142,3 +155,4 @@ AND2 CLA5_C5_TMP4(.A(p4), .B(g3), .Out(c5_tmp4));
 OR6 CLA5_C5(.A(g4), .B(c5_tmp0), .C(c5_tmp1), .D(c5_tmp2), .E(c5_tmp3), .F(c5_tmp4), .Out(Cout));
 
 endmodule
+

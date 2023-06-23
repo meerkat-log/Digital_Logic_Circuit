@@ -12,3 +12,4 @@ ALU_Control ALU_CONTROL(.ALUOp(ALUOp), .InstructionOp(InstructionOp), .ALUContro
 ALU ALU_OUT(.A(A), .B(B), .Control(ALUControlSig), .High(High), .Low(Low), .ZeroFlag(ZeroFlag));
 
 endmodule
+

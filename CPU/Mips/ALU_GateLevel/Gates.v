@@ -153,6 +153,14 @@ output [31:0] Out;
 assign #5 Out = A ^ B;
 
 endmodule
+module XOR2_64bit(A, B, Out);
+
+input [63:0] A, B;
+output [63:0] Out;
+
+assign #5 Out = A ^ B;
+
+endmodule
 
 
 module NOT1(A, Out);
@@ -178,9 +186,24 @@ module NAND2(A, B, Out);
 input A, B;
 output Out;
 
-assign #15 Out = ~(A & B);
+wire Tmp;
+
+AND2 AND(.A(A), .B(B), .Out(Tmp));
+NOT1 NOT(.A(Tmp), .Out(Out));
 
 endmodule
+module NAND3(A, B, C, Out);
+
+input A, B, C;
+output Out;
+
+wire Tmp;
+
+AND3 AND(.A(A), .B(B), .C(C), .Out(Tmp));
+NOT1 NOT(.A(Tmp), .Out(Out));
+
+endmodule
+
 
 module NOR2(A, B, Out);
 
@@ -198,3 +221,4 @@ output [31:0] Out;
 assign #15 Out = ~(A | B);
 
 endmodule
+

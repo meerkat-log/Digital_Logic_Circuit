@@ -83,3 +83,4 @@ Comparator_32bit SLT(.A(A), .B(B), .ALB(tmp));
 assign Out = {31'h00000000,tmp};
 
 endmodule
+

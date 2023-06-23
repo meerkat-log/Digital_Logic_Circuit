@@ -24,3 +24,4 @@ Mux16to1_32bit LOW_OUT(.I0(And), .I1(Or), .I2(SumOrSub), .I3(Mul[31:0]), .I4(Div
 Mux16to1_32bit HIGH_OUT(.I0(32'h00000000), .I1(32'h00000000), .I2(32'h00000000), .I3(Mul[63:32]), .I4(DivQ), .I6(32'h00000000), .I7(32'h00000000), .Sel(Control), .Out(High));
 
 endmodule
+
