@@ -64,13 +64,48 @@ initial begin
 	CLR = 1'b1;
 end
 */
-
+/*
 wire CLK;
 wire [63:0] Out;
 
 Clock CLOCK(.CLK(CLK));
 Multiplier MUL(.CLK(CLK), .A(32'h0000007F), .B(32'h00000070), .Out(Out));
+*/
+/*
+reg En, Rst;
+wire CLK;
+wire [2:0] Out;
+Clock CLOCK(.CLK(CLK));
+RadixCounter RC(.Clk(CLK), .En(En), .Rst(Rst), .Out(Out));
 
+initial begin
+	Rst = 1'b1;
+	En = 1'b0;
+	#100
+	Rst = 1'b0;
+	En = 1'b1;
 
+end
+*/
+/*
+reg En, Reset;
+wire CLK;
+wire [3:0] Out;
+
+Clock_Radix CLOCK(.CLK(CLK));
+RadixSelect RS(.CLK(CLK), .En(En), .Reset(Reset), .B(32'b00010010001101000101011001111000), .Out(Out));
+
+initial begin
+	Reset = 1'b0;
+	En = 1'b0;
+	#100 Reset = 1'b1;
+	En = 1'b1;
+
+end
+*/
+
+wire [63:0] Out;
+
+Multiplier MUL(.A(32'H0000054A), .B(32'H000015ED), .Out(Out));
 endmodule
 
