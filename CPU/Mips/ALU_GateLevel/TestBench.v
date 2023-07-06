@@ -107,5 +107,45 @@ end
 wire [63:0] Out;
 
 Multiplier MUL(.A(32'H0000054A), .B(32'H000015ED), .Out(Out));
+
+/*
+wire ALB, AEB, AGB;
+wire [63:0] Out;
+Divider DIV(.A(32'H00000001), .B(32'H00000002), .Out(Out));
+*/
+/*
+wire CLK, Q, Qbar;
+reg En, Preset, Reset, D;
+
+Clock_Register CLOCK(.CLK(CLK));
+DFF_PRESET DFFP(.CLK(CLK), .En(En), .Preset(Preset), .Reset(Reset), .D(D), .Q(Q), .Qbar(Qbar));
+
+initial begin
+	D = 1'b0;
+	Reset = 1'b1;
+	En = 1'b0;
+	Preset = 1'b0;
+	#100 
+	Reset = 1'b1;
+	En = 1'b1;
+	Preset = 1'b1;
+
+end
+*/
+/*
+wire CLK;
+reg En, Reset;
+wire [31:0] Out;
+Clock_Counter CLOCK(.CLK(CLK));
+DividerCounter DC(.CLK(CLK), .En(En), .Reset(Reset), .Out(Out));
+
+initial begin
+	En = 1'b0;
+	Reset = 1'b0;
+	#100;
+	En = 1'b1;
+	Reset = 1'b1;
+end
+*/
 endmodule
 

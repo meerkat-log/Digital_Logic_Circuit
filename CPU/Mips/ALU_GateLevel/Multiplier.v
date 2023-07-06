@@ -230,8 +230,8 @@ module Multiplier(A, B, Out);
 input [31:0] A, B;
 output [63:0] Out;
 
-reg En0, En3, Reset0, Reset3;
-reg [1:0] ModeA, ModeB, ModeC;
+reg En0, En1, Reset0, Reset1;
+reg [1:0] ModeA, BoothA, BoothB;
 wire CLK;
 wire [3:0] Radix;
 wire [1:0] Out0, Out1;
@@ -245,45 +245,37 @@ RadixSelect RADIX_SELECT(.CLK(CLK), .En(En0), .Reset(Reset0), .B(B), .Out(Radix)
 //Register_5bit REG5(.CLK(CLK), .En(En1), .Reset(Reset1), .In(Radix), .Out(RadixOut));
 
 BoothLookUpTable BLUT(.In(Radix), .Out0(Out0), .Out1(Out1), .Sel0(Sel0), .Sel1(Sel1));
-BoothAdder BOOTH_ADDER(.A(A), .ModeA(ModeA), .ModeB(ModeB), .ModeC(ModeC), .Sel0(Sel0), .Sel1(Sel1), .Sign(Sign), .Out(Booth));
+BoothAdder BOOTH_ADDER(.A(A), .ModeA(ModeA), .ModeB(BoothA), .ModeC(BoothB), .Sel0(Sel0), .Sel1(Sel1), .Sign(Sign), .Out(Booth));
 
 //Register_64bit REG64(.CLK(CLK), .En(En2), .Reset(Reset2), .In(Booth), .Out(BoothOut));
 
-SaveResult SAVE(.CLK(CLK), .En(En3), .Reset(Reset3), .A(Booth), .Out(Out));
+SaveResult SAVE(.CLK(CLK), .En(En1), .Reset(Reset1), .A(Booth), .Out(Out));
 
 integer i, j, k;
 initial begin
-	En0 = 1'b0;
-	Reset0 = 1'b0;
-	En3 = 1'b0;
-	Reset3 = 1'b0;
-	ModeA = 2'b11;
+	En0 = 1'b0; Reset0 = 1'b0; En1 = 1'b0; Reset1 = 1'b0; ModeA = 2'b11;
 	#100
-	ModeA = 2'b00;
-	Reset0 = 1'b1;
-	Reset3 = 1'b1;
+	ModeA = 2'b00; Reset0 = 1'b1; Reset1 = 1'b1;
 	#100
 	
 	for(i = 0; i < 8; i = i + 1) begin
-		ModeB = 2'b11;
+		BoothA = 2'b11;
 		#100;
 		for(j = 0; j < Out0; j = j + 1) begin
-			ModeB <= 2'b10;
+			BoothA <= 2'b10;
 			#100;
 		end
-		ModeB = 2'b00;
-		ModeC = 2'b11;
+		BoothA = 2'b00; BoothB = 2'b11;
 		#100;
 		for(k = 0; k < Out1; k = k + 1) begin
-			ModeC <= 2'b10;
+			BoothB <= 2'b10;
 			#100;
 		end
-		ModeC = 2'b00;
+		BoothB = 2'b00;
 		#200
-		En3 = 1'b1;
+		En1 = 1'b1;
 		#100
-		En3 = 1'b0;
-		ModeA = 2'b10;
+		En1 = 1'b0; ModeA = 2'b10;
 		#400 ModeA= 2'b00;
 		En0 = 1'b1;
 		#100 
