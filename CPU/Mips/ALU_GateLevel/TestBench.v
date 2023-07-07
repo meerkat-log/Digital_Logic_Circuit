@@ -103,11 +103,11 @@ initial begin
 
 end
 */
-
+/*
 wire [63:0] Out;
 
-Multiplier MUL(.A(32'H0000054A), .B(32'H000015ED), .Out(Out));
-
+Multiplier MUL(.A(32'H31254a88), .B(32'H61513858), .Out(Out));
+*/
 /*
 wire ALB, AEB, AGB;
 wire [63:0] Out;
@@ -147,5 +147,35 @@ initial begin
 	Reset = 1'b1;
 end
 */
+/*
+wire Cout;
+wire [31:0] Out;
+AdderAndSubtractor_64bit Adder(.A(64'H8765432187654321), .B(64'H8756481231564812), .Cin(1), .Cout(Cout), .Out(Out));
+*/
+/*
+wire CLK;
+reg En, Reset;
+reg [31:0] In;
+wire [31:0] Out;
+Clock CLOCK(.CLK(CLK));
+Register_32bit REG(.CLK(CLK), .En(1), .Reset(1), .In(32'HFFFFFFFF), .Out(Out));
+*/
+/*
+wire ALB, AEB, AGB;
+Comparator_32bit COMP(.A(32'H00000000), .B(32'H00000000), .ALB(ALB), .AEB(AEB), .AGB(AGB));
+*/
+
+reg [1:0] mode;
+wire CLK;
+wire [63:0] Out;
+Clock CLOCK(.CLK(CLK));
+ShiftRegister_64bit SR(.CLK(CLK), .Mode(mode), .In(64'H0FFFFFFFFFFFFFFF), .Out(Out));
+
+initial begin
+	mode = 2'b11;
+	#200;
+	mode = 2'b01;
+end
+
 endmodule
 
