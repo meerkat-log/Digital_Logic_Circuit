@@ -1,5 +1,27 @@
 `timescale 1ns/1ns
 
+
+// Use Radix to export Sign bits and numbers.
+/* 
+	Multiplier	Encoding
+	00000,11111	0
+	00001,00010	+1*Multiplicand
+	00011,00100	+2*Multiplicand
+	00101,00110	+3*Multiplicand
+	00111,01000	+4*Multiplicand
+	01001,01010	+5*Multiplicand
+	01011,01100	+6*Multiplicand
+	01101,01110	+7*Multiplicand
+	01111		+8*Multiplicand
+	10000		-8*Multiplicand
+	10001,10010	-7*Multiplicand
+	10011,10100	-6*Multiplicand
+	10101,10110	-5*Multiplicand
+	10111,11000	-4*Multiplicand
+	11001,11010	-3*Multiplicand
+	11011,11100	-2*Multiplicand
+	11101,11110	-1*Multiplicand
+*/
 module RadixLookUpTable(Radix, Sign, Out);
 
 input [4:0] Radix;

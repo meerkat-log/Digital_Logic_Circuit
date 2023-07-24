@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 
-module Clock_En(CLK);
+module Clock_300(CLK);
 
 output CLK;
 reg CLK;
@@ -10,8 +10,8 @@ initial begin
 end
 
 always begin
-	#50 CLK = 1'b0;
-	#350 CLK = 1'b1;
+	#150 CLK = 1'b0;
+	#150 CLK = 1'b1;
 end
 
 endmodule

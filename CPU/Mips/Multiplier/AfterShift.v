@@ -1,13 +1,13 @@
 `timescale 1ns/1ns
 
-module AfterShift(SelBoothA, SelBoothB, SelBoothC, Sign, A, AfterA, BoothA, BoothB, BoothC);
+module AfterShift(SelBoothA, SelBoothB, SelBoothC, Sign, A, BoothA, BoothB, BoothC);
 
 input [2:0] SelBoothA;
 input [1:0] SelBoothB;
 input SelBoothC;
 input Sign;
 input [63:0] A;
-output [63:0] AfterA, BoothA, BoothB, BoothC;
+output [63:0] BoothA, BoothB, BoothC;
 
 wire [63:0] SetA;
 
@@ -17,8 +17,6 @@ Mux8to1_64bit MUX_BOOTHA(.I0(64'H0000000000000000), .I1(SetA), .I2({SetA[62:0], 
 Mux4to1_64bit MUX_BOOTHB(.I0(64'H0000000000000000), .I1(SetA), .I2({SetA[62:0], 1'b0}), .Sel(SelBoothB), .Out(BoothB));
 Mux2to1_64bit MUX_BOOTHC(.I0(64'H0000000000000000), .I1(SetA), .Sel(SelBoothC), .Out(BoothC));
 
-assign AfterA = {A[59:0], 4'b0000};
-
 endmodule
 
 module tb_AfterShift();
@@ -27,9 +25,9 @@ reg [2:0] SelBoothA;
 reg [1:0] SelBoothB;
 reg SelBoothC, Sign;
 reg [63:0] A;
-wire [63:0] AfterA, BoothA, BoothB, BoothC;
+wire [63:0] BoothA, BoothB, BoothC;
 
-AfterShift AS(.SelBoothA(SelBoothA), .SelBoothB(SelBoothB), .SelBoothC(SelBoothC), .Sign(Sign), .A(A), .AfterA(AfterA), .BoothA(BoothA), .BoothB(BoothB), .BoothC(BoothC));
+AfterShift AS(.SelBoothA(SelBoothA), .SelBoothB(SelBoothB), .SelBoothC(SelBoothC), .Sign(Sign), .A(A), .BoothA(BoothA), .BoothB(BoothB), .BoothC(BoothC));
 
 integer i;
 initial begin

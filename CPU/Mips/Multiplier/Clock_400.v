@@ -6,12 +6,12 @@ output CLK;
 reg CLK;
 
 initial begin
-	CLK = 1'b0;
+	CLK = 1'b1;
 end
 
 always begin
-	#200 CLK = 1'b1;
 	#200 CLK = 1'b0;
+	#200 CLK = 1'b1;
 end
 
 endmodule
