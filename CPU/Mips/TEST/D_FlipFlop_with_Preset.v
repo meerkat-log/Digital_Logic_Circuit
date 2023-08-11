@@ -57,7 +57,7 @@ reg En, Reset, Preset, D;
 wire Clk, Q, Qbar;
 
 Clock_100 CLOCK(.Clk(Clk));
-D_FlipFlop_with_Preset DFF(.Clk(Clk), .En(En), .Reset(Reset), .Preset(Preset), .D(D), .Q(Q), .Qbar(Qbar));
+D_FlipFlop_Preset DFF(.Clk(Clk), .En(En), .Reset(Reset), .Preset(Preset), .D(D), .Q(Q), .Qbar(Qbar));
 
 initial begin
 	D = 1'b1;
